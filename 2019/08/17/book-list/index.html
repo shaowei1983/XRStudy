@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo32.jpg?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo16.jpg?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"always","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="在我的教程《HTC VIVE 交互开发实例教程》发布以来，有非常多的学员来问，怎么学好VR技术？短期之内我能掌握这门技术吗？像XX这种产品，我多长时间能够做出来？笔者也曾反复说过，VR只是一个平台，我们要学的并不是仅仅是VR技术本身，而是其背后的Unity技术和产品开发思路，所以这就可以解释为什么新技术起来的时候并不是那些介入时间早的人，而是那些之前就有相关行业积累的人。以笔者本人为例，得益于在三">
+<meta name="keywords" content="XR,VR,AR,PBR,Substance,SteamVR,HTC Vive,Oculus,Gear VR,Unity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XR学习书单（2019）">
+<meta property="og:url" content="http://www.xrstudy.net/2019/08/17/book-list/index.html">
+<meta property="og:site_name" content="XR技术研习社">
+<meta property="og:description" content="在我的教程《HTC VIVE 交互开发实例教程》发布以来，有非常多的学员来问，怎么学好VR技术？短期之内我能掌握这门技术吗？像XX这种产品，我多长时间能够做出来？笔者也曾反复说过，VR只是一个平台，我们要学的并不是仅仅是VR技术本身，而是其背后的Unity技术和产品开发思路，所以这就可以解释为什么新技术起来的时候并不是那些介入时间早的人，而是那些之前就有相关行业积累的人。以笔者本人为例，得益于在三">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-33e86e712f428240.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/225/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-9470889fdde6b4b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/306/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-63954f6903b7b95d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/306/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-f4c2c520d888cfc5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/324/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-21816d122805e040.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/303/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-2284138873d6f4f1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/315/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-c95a4486daae5fb2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/312/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-1287976c11c62bae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/291/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1199677-932044af55d3d1f8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/324/format/webp">
+<meta property="og:updated_time" content="2019-08-17T04:30:43.970Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XR学习书单（2019）">
+<meta name="twitter:description" content="在我的教程《HTC VIVE 交互开发实例教程》发布以来，有非常多的学员来问，怎么学好VR技术？短期之内我能掌握这门技术吗？像XX这种产品，我多长时间能够做出来？笔者也曾反复说过，VR只是一个平台，我们要学的并不是仅仅是VR技术本身，而是其背后的Unity技术和产品开发思路，所以这就可以解释为什么新技术起来的时候并不是那些介入时间早的人，而是那些之前就有相关行业积累的人。以笔者本人为例，得益于在三">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1199677-33e86e712f428240.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/225/format/webp">
+  <link rel="canonical" href="http://www.xrstudy.net/2019/08/17/book-list/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>XR学习书单（2019） | XR技术研习社</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77014436-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-77014436-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">XR技术研习社</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">赋能VR/AR开发者和设计师</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    
+  <div class="popup search-popup">
+  <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-wrapper">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+  <div id="search-result"></div>
+</div>
+
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.xrstudy.net/2019/08/17/book-list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邵 伟">
+      <meta itemprop="description" content="Trust The Process">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XR技术研习社">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">XR学习书单（2019）
+
+          
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-17 12:15:45 / 修改时间：12:30:43" itemprop="dateCreated datePublished" datetime="2019-08-17T12:15:45+08:00">2019-08-17</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在我的教程《<a href="https://ke.qq.com/course/241732?tuin=3e93b86" target="_blank" rel="noopener">HTC VIVE 交互开发实例教程</a>》发布以来，有非常多的学员来问，怎么学好VR技术？短期之内我能掌握这门技术吗？像XX这种产品，我多长时间能够做出来？笔者也曾反复说过，VR只是一个平台，我们要学的并不是仅仅是VR技术本身，而是其背后的Unity技术和产品开发思路，所以这就可以解释为什么新技术起来的时候并不是那些介入时间早的人，而是那些之前就有相关行业积累的人。以笔者本人为例，得益于在三维仿真技术上的积累，在我转移到VR技术平台上的时候，过渡成本是非常低的，至于再去了解什么HTC VIVE、SteamVR、VRTK、The Lab Renderer，基本上就是看看文档的事情。</p><a id="more"></a>
+<p>单就VR兴起的时间来说，我们是处于同一起跑线上的，本质上还是对Unity技术以及产品思路的积累。下面我就分享一下我在学习VR技术过程中积累的部分书单，与其说是书单，不如说是知识结构，这些书籍在我的VR开发道路上起到了非常重要的作用，尤其是在淄博这种三线城市，一没有大神，二没有环境，除了科学上网看个YouTube、Twitter、Facebook、Google Plus 、Pornhub（oh sorry，是Github）以外，这些书籍就是我的智囊团了，每次遇到问题，我都会去倾听一下它们的意见，它们每天就静静地躺在那里，不悲不喜，随用随走，我非常感谢他们。希望它们也能够帮助到大家，有兴趣的朋友可以参考。</p>
+<h2 id="VR行业篇"><a href="#VR行业篇" class="headerlink" title="VR行业篇"></a>VR行业篇</h2><blockquote>
+<p><strong>《VR革命:虚拟现实将如何改变我们的生活》</strong></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-33e86e712f428240.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/225/format/webp" alt></p>
+<p>豆瓣评分：8.0分</p>
+<p>对于VR行业的分析十分到位，惊奇的是作者不光对VR有研究，还有很多比较接地气的营销思路，比如微博问答、内容收费等，总之受益匪浅。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+<blockquote>
+<p><strong>《VR来了！： 重塑社交、颠覆产业的下一个技术平台》</strong></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-9470889fdde6b4b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/306/format/webp" alt></p>
+<p>豆瓣评分：8.0分</p>
+<p>随书附送的VR眼镜不错，最后一章的《虚拟现实+》结合了十来个行业，给了很多启迪，不过切忌产生VR什么都能做的幻觉，切忌拿着榔头看哪里都有钉子。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+<h2 id="Unity技术篇"><a href="#Unity技术篇" class="headerlink" title="Unity技术篇"></a>Unity技术篇</h2><blockquote>
+<p><strong>《Unity 5 权威讲解》</strong></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-63954f6903b7b95d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/306/format/webp" alt></p>
+<p>适合技术进阶，有代码实例段，也是很厚的一本书，韩国人写的一部作品，能够发现一些新的思路。代码清单注释详细，几乎每行都有注释，字体也是我比较喜欢的Courier New。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+<blockquote>
+<p><strong>《Unity游戏设计与实现》</strong></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-f4c2c520d888cfc5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/324/format/webp" alt></p>
+<p>豆瓣评分：9.3分</p>
+<p>就像书名说的，包括了游戏设计思路和Unity代码实现，日本南梦宫作品，完整的十个游戏案例，从头到尾地讲解，遍地小贴士，很有营养的一本教材。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+<blockquote>
+<p><strong>《Unity API解析》</strong></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-21816d122805e040.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/303/format/webp" alt></p>
+<p>一本字典型参考书，如果你阅读英文文档有困难，可以拿这本书作为参考，基本覆盖了unity编程中用到的基本词汇，再强调一遍，一定要看文档、一定要看文档、一定要看文档。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+<blockquote>
+<p><strong>《Unity 3D脚本编程:使用C#语言开发跨平台游戏》</strong></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-2284138873d6f4f1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/315/format/webp" alt></p>
+<p>深入讲解了Unity中的C#，干货比较多，市面上要么就纯讲C#，要么就在讲Unity的时候顺带着讲一些C#，很少见到如此系统且密切地结合Unity讲C#的书。适合学院派程序员和打算从野路子从良的代码搬运工。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+<blockquote>
+<p><strong>《Unity 5实战:使用C#和Unity开发多平台游戏》</strong></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-c95a4486daae5fb2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/312/format/webp" alt></p>
+<p>《Unity in Action:Multiplatform Game Development in C# with Unity5》的中文版，详细介绍了Unity应用从开发到部署的全过程，一般的Unity教材，为了凑字数，头三章基本废掉，无非是Unity的前世今生、窗口介绍、基本操作然后hello world这样的前戏，这本书则单刀直入，略过了百度就能搜到的众所周知的废话，来，我们一起开发个应用，然后我跟你说说这些代码。一看就是来自生产一线的经验。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+<blockquote>
+<p>《Unity官方案例精讲》</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-1287976c11c62bae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/291/format/webp" alt></p>
+<p>这本书是unity官方曾经推出过的几个案例的详解，包括《潜行》、《角色换装》、《Space Shooter》等等，适合随便翻翻，找几个有用的代码片段。需要吐槽的地方是不知道为什么要用全彩印刷，又不是设计类的图书，死沉，重要的是阅读的时候反光，不适合深夜秉烛夜读。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+<blockquote>
+<p><strong>《游戏设计的236个技巧:游戏机制、关卡设计和镜头窍门》</strong></p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1199677-932044af55d3d1f8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/324/format/webp" alt></p>
+<p>豆瓣评分：8.9分</p>
+<p>为什么实现了相同的功能，比如跳跃、比如玩法，自己的作品和大作比起来总是感觉缺少那么一点说不上来的差距？这本书会从技术层面让这些差距在哪里以及如何达到，大部头，适合带着问题去查阅。</p>
+<p><strong>链接：当当 | 京东</strong></p>
+
+    </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>理性赞赏，犒劳思想</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/weixinpay.jpg" alt="邵 伟 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="邵 伟 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>邵 伟</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.xrstudy.net/2019/08/17/book-list/" title="XR学习书单（2019）">http://www.xrstudy.net/2019/08/17/book-list/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/16/SteamVR 入门/" rel="next" title="SteamVR 2.0 入门">
+                  <i class="fa fa-chevron-left"></i> SteamVR 2.0 入门
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/logo.jpg"
+      alt="邵 伟">
+  <p class="site-author-name" itemprop="name">邵 伟</p>
+  <div class="site-description motion-element" itemprop="description">Trust The Process</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://xrstudy.oss-cn-shanghai.aliyuncs.com/1199677-09a4e06754c053de.jpg" title="公号 &rarr; https://xrstudy.oss-cn-shanghai.aliyuncs.com/1199677-09a4e06754c053de.jpg" rel="noopener" target="_blank"><i class="fa fa-fw fa-wechat"></i>公号</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://zhuanlan.zhihu.com/sovida" title="知乎 &rarr; https://zhuanlan.zhihu.com/sovida" rel="noopener" target="_blank"><i class="fa fa-fw fa-link"></i>知乎</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="/www.jd.com" title="出版 &rarr; www.jd.com"><i class="fa fa-fw fa-book"></i>出版</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="/www.jd.com" title="视频教程 &rarr; www.jd.com"><i class="fa fa-fw fa-video-camera"></i>视频教程</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VR行业篇"><span class="nav-number">1.</span> <span class="nav-text">VR行业篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unity技术篇"><span class="nav-number">2.</span> <span class="nav-text">Unity技术篇</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">鲁ICP备15039259号-2 </a>&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">邵 伟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script><script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>
